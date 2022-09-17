@@ -9,6 +9,10 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
+// Code Highlighter
+import VueHighlightJS from 'vue3-highlightjs'
+import "vue3-highlightjs/styles/night-owl.css"
+
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
@@ -16,6 +20,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
+            .use(VueHighlightJS)
             .mount(el);
     },
 });

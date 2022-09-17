@@ -54,6 +54,11 @@ const menuToggle = () => {
                 <NavLink :href="route('themes')" :active="route().current('themes')">
                   Temalar
                 </NavLink>
+
+                <!--Dökümantasyon-->
+                <NavLink :href="route('documentation')" :active="route().current('documentation')">
+                  Dökümantasyon
+                </NavLink>
               </div>
 
               <!--Hamburger Menu-->
@@ -92,7 +97,7 @@ const menuToggle = () => {
       </header>
 
       <!-- Page Content -->
-      <main>
+      <main class="max-w-7xl mx-auto py-12">
         <slot/>
       </main>
     </div>

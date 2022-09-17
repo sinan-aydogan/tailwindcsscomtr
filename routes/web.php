@@ -34,5 +34,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('components', [\App\Http\Controllers\ComponentController::class, 'index'])->name('components');
-Route::get('themes', [\App\Http\Controllers\ThemeController::class, 'index'])->name('themes');
+Route::get('documentation', function (){
+    return Inertia::render('Documentation');
+})->name('documentation');
