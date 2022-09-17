@@ -33,3 +33,6 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('components', [\App\Http\Controllers\ComponentController::class, 'index'])->name('components');
+Route::get('themes', [\App\Http\Controllers\ThemeController::class, 'index'])->name('themes');
