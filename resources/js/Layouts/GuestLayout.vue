@@ -33,7 +33,7 @@ const menuToggle = () => {
             <!--Left Side-->
             <div class="flex items-center">
               <!-- Logo -->
-              <Link :href="route('dashboard')" class="shrink-0 flex items-center space-x-2">
+              <Link :href="route('home')" class="shrink-0 flex items-center space-x-2">
                 <span class="text-2xl font-bold text-cyan-500">tailwindcss</span>
                 <div class="flex flex-col leading-none border-l pl-2 text-xs text-cyan-500 border-slate-300">
                   <span>com</span>
@@ -82,7 +82,7 @@ const menuToggle = () => {
           </div>
 
           <div class="flex w-64 pt-2 pb-3 space-y-1">
-            <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+            <ResponsiveNavLink :href="route('home')" :active="route().current('home')">
               Komponentler
             </ResponsiveNavLink>
           </div>
