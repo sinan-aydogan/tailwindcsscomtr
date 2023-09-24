@@ -72,6 +72,41 @@ const componentsList = [
       }
     ]
   },
+    {
+        id: 'form',
+        label: 'Form Bileşenleri',
+        detail: 'Kullanıcıdan veri almak için kullanılan bileşenler.',
+        components: [
+            {
+                id: 'search-input',
+                label: 'Arama Kutuları'
+            },
+            {
+                id: 'text-input',
+                label: 'Text Inputlar'
+            },
+            {
+                id: 'select-input',
+                label: 'Açılır Listeler (Select)'
+            },
+            {
+                id: 'Radio',
+                label: 'Radyo Düğmeler'
+            },
+            {
+                id: 'checkbox',
+                label: 'Checkboxlar'
+            },
+            {
+                id: 'range',
+                label: 'Aralık Seçiciler'
+            },
+            {
+                id: 'date-picker',
+                label: 'Tarih Seçiciler'
+            }
+        ]
+    },
   {
     id: 'navigation',
     label: 'Navigasyon',
@@ -173,7 +208,7 @@ const componentsList = [
               <div :id="j.id" class="flex flex-col group transition-all active:scale-95 cursor-pointer">
                 <h5 v-text="j.label" class="mb-2 text-sm font-semibold"></h5>
                 <div class="relative">
-                  <img :src="'https://picsum.photos/seed/'+Date.now()+index+'/400/200'" class="w-full object-cover group-hover:blur-[.1rem] transition-all duration-300">
+                  <img :src="'https://picsum.photos/seed/'+Date.now()+index+'/400/200'" class="w-full object-cover group-hover:blur-[.1rem] transition-all duration-300" alt="Bileşen Ön İzlemesi">
                   <div class="hidden absolute group-hover:flex items-center justify-center top-0 left-0 w-full h-full text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
